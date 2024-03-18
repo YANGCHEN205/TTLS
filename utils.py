@@ -51,3 +51,7 @@ def make_CDP_operator(N, M_over_N, matrix_type, mask_type):
         A[i*N:(i+1)*N] = F * d
         
     return A
+
+def norm_estimate(y):
+    # Estimate norm of signal from measurements
+    return np.sqrt(0.5*np.sum(y)/y.shape[0])
